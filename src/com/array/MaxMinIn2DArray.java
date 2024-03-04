@@ -12,9 +12,9 @@ public class MaxMinIn2DArray {
     static int min(int[][] arr) {
         int min = arr[0][0];
         for (int[] arr2 : arr) {
-            for (int j = 0; j < arr2.length; j++) {
-                if (min > arr2[j]) {
-                    min = arr2[j];
+            for (int i : arr2) {
+                if (min > i) {
+                    min = i;
                 }
             }
         }
@@ -24,9 +24,9 @@ public class MaxMinIn2DArray {
     static int max(int[][] arr) {
         int max = arr[0][0];
         for (int[] arr2 : arr) {
-            for (int j = 0; j < arr2.length; j++) {
-                if (max < arr2[j]) {
-                    max = arr2[j];
+            for (int i : arr2) {
+                if (max < i) {
+                    max = i;
                 }
             }
         }

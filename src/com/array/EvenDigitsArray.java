@@ -28,4 +28,9 @@ public class EvenDigitsArray {
         }
         return c;
     }
+
+    static int numOfDigits2(int n){   //shortcut for no of digits
+        return (int)(Math.log10(n) + 1);
+    }
+
 }

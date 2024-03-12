@@ -3,11 +3,11 @@ package com.array;
 public class SmallestLetter {
     public static void main(String[] args) {
         char[] letters = {'c', 'f', 'j'};
-        char target = 'k';
+        char target = 'j';
         System.out.println(nextGreatestLetter(letters, target));
     }
     static char nextGreatestLetter(char[] letters, char target) {
-        if (target > letters[letters.length - 1]){
+        if (target >= letters[letters.length - 1]){
             return letters[0];
         }
         int start = 0;

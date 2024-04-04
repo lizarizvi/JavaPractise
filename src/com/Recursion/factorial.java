@@ -6,7 +6,7 @@ public class factorial {
     }
 
     static int fact(int n) {
-        if (n == 1){
+        if (n <= 1){     //this will also return factorial of 0 as 1
             return 1;
         }
         return n * fact(n - 1);

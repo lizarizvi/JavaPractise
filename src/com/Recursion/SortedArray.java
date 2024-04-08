@@ -8,6 +8,10 @@ public class SortedArray {
         System.out.println(linearSearch(arr,0, 5));
         findAllIndex(arr, 0, 2);
         System.out.println(arrayList);
+
+        System.out.println(findAllIndex2(arr, 0, 2, new ArrayList<>()));
+        System.out.println(findAllIndex3(arr, 0, 2));
+
     }
 
     static boolean sortedOrNot(int[] arr, int index) {
@@ -36,4 +40,28 @@ public class SortedArray {
         }
         findAllIndex(arr, index + 1, target);
     }
-}
+
+    static ArrayList<Integer> findAllIndex2(int[] arr, int index, int target, ArrayList<Integer> list){
+        if (index == arr.length - 1){
+            return list;
+        }
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        return findAllIndex2(arr, index + 1, target, list);
+    }
+
+    static ArrayList<Integer> findAllIndex3(int[] arr, int index, int target){
+        ArrayList<Integer> list = new ArrayList<>();
+        if (index == arr.length - 1){
+            return list;
+        }
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        ArrayList<Integer> ansFromBelowCalls = findAllIndex3(arr, index + 1, target);
+        list.addAll(ansFromBelowCalls);
+        return list;
+    }
+
+    }

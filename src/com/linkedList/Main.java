@@ -4,15 +4,18 @@ public class Main {
     public static void main(String[] args) {
 
 //SINGLY LL
-//        SinglyLL list = new SinglyLL();
-//
-//        list.insertFirst(12);
-//        list.insertFirst(34);
-//        list.insertFirst(33);
-//        list.insertFirst(23);
-//        list.insertFirst(55);
-//        list.insertFirst(66);
-//        list.insertFirst(22);
+        SinglyLL list = new SinglyLL();
+
+        list.insertFirst(12);
+        list.insertFirst(34);
+        list.insertFirst(33);
+        list.insertFirst(23);
+        list.insertFirst(55);
+        list.insertFirst(66);
+        list.insertFirst(22);
+        list.display();
+        list.insertRecursion(11,3);
+        list.display();
 //
 //
 //        list.insertLast(99);
@@ -56,20 +59,20 @@ public class Main {
 //        list.display();
 
 //        list.displayReverse();
-
-        CircularLL list = new CircularLL();
-
-        list.insertFirst(12);
-        list.insertFirst(23);
-        list.insertFirst(34);
-        list.insertFirst(45);
-        list.insertFirst(56);
-        list.display();
-
-        list.insertAfter(56, 99);
-        list.display();
-
-        list.delete(12);
-        list.display();
+//
+//        CircularLL list = new CircularLL();
+//
+//        list.insertFirst(12);
+//        list.insertFirst(23);
+//        list.insertFirst(34);
+//        list.insertFirst(45);
+//        list.insertFirst(56);
+//        list.display();
+//
+//        list.insertAfter(56, 99);
+//        list.display();
+//
+//        list.delete(12);
+//        list.display();
     }
 }

@@ -108,6 +108,41 @@ public class SinglyLL {
         return node;
     }
 
+    public void bubbleSort(){
+        bubble(size - 1, 0);
+    }
+
+    private void bubble(int row, int col) {
+        if (row == 0){
+            return;
+        }
+        if (col < row){
+            Node f = get(col);
+            Node s = get(col + 1);
+            if (f.value > s.value){
+                if (f == head){
+                    head = s;
+                    f.next = s.next;
+                    s.next = f;
+                } else if (s == tail) {
+                    Node prev = get(col - 1);
+                    prev.next = s;
+                    tail = f;
+                    f.next = null;
+                    s.next = tail;
+                } else {
+                    Node prev = get(col - 1);
+                    prev.next = s;
+                    f.next = s.next;
+                    s.next = f;
+                }
+            }
+            bubble(row, col + 1);
+        } else {
+            bubble(row - 1, 0);
+        }
+    }
+
     public Node find(int value){
         Node node = head;
         while(node != null) {

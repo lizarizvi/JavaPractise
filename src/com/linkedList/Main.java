@@ -6,15 +6,18 @@ public class Main {
 //SINGLY LL
         SinglyLL list = new SinglyLL();
 
-        list.insertFirst(12);
-        list.insertFirst(34);
-        list.insertFirst(33);
-        list.insertFirst(23);
-        list.insertFirst(55);
-        list.insertFirst(66);
-        list.insertFirst(22);
+        list.insertFirst(3);
+        list.insertFirst(2);
+        list.insertFirst(1);
+        list.insertFirst(4);
+//        list.insertFirst(55);
+//        list.insertFirst(66);
+//        list.insertFirst(22);
+//        list.display();
+//        list.insertRecursion(11,3);
         list.display();
-        list.insertRecursion(11,3);
+
+        list.bubbleSort();
         list.display();
 //
 //

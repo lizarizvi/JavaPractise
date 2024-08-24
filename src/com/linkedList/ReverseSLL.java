@@ -10,6 +10,12 @@ public class ReverseSLL {
     }
 
     public ListNode reverseList(ListNode head){
+
+//        you can also make a check over here for the below exception
+//        if (head == null){
+//            return head;
+//        }
+
         ListNode prev = null;
         ListNode present = head;
         // ListNode next = present.next; //could throw null pointer exception
